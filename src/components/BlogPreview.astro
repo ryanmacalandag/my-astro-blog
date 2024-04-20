@@ -9,20 +9,25 @@ const { data, slug } = Astro.props.blog;
 ---
 
 <a class="card" href={`/blog/${slug}`}>
-	<span class="title">{data.title}</span>
+	<!-- <span class="title">{data.title}</span> -->
 	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
+	<div class="blog-card-info">
+		<div>{data.title}</div>
+		<div></div>
+	</div>
 </a>
 
 <style>
 	.card {
 		display: grid;
 		grid-template: auto 1fr / auto 1fr;
+		gap: 1.35rem;
 		height: 11rem;
-		background: var(--gradient-subtle);
-		border: 1px solid var(--gray-800);
+		background: var(--color-transparent);
+		/* border: 1px solid var(--gray-800); */
 		border-radius: 0rem;
 		overflow: hidden;
-		box-shadow: var(--shadow-sm);
+		/* box-shadow: var(--shadow-sm); */
 		text-decoration: none;
 		font-family: var(--font-brand);
 		font-size: var(--text-lg);
@@ -31,7 +36,7 @@ const { data, slug } = Astro.props.blog;
 	}
 
 	.card:hover {
-		box-shadow: var(--shadow-md);
+		/* box-shadow: var(--shadow-md); */
 		filter: grayscale(.5);
 	}
 
@@ -52,10 +57,17 @@ const { data, slug } = Astro.props.blog;
 		object-fit: cover;
 	}
 
+	.blog-card-info {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		gap: 1rem;
+	}
+
 	@media (min-width: 50em) {
 		.card {
 			height: 22rem;
-			border-radius: 1.5rem;
+			/* border-radius: 1.5rem; */
 		}
 
 		.title {

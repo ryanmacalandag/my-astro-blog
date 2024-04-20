@@ -9,6 +9,7 @@ tags:
   - Frontend
   - Frameworks
   - Javascript
+  - Technology
 ---
 
 Welcome to the jungle, fellow coders! Today, we're embarking on a wild adventure through the lush landscape of JavaScript frameworks. Grab your gear, because we're diving into the tangled vines of React, swinging through the branches of Next.js, and soaring high with Astro. Strap in, and let's explore these frameworks that have captured our coding hearts!
