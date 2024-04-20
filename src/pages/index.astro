@@ -94,7 +94,7 @@ const blog = (await getCollection('blog'))
 				<div class="gallery">
 					<Grid>
 						{
-							projects.map((blog) => (
+							blog.map((blog) => (
 								<li>
 									<BlogPreview blog={blog} />
 								</li>

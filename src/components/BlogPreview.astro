@@ -20,7 +20,7 @@ const { data, slug } = Astro.props.blog;
 		height: 11rem;
 		background: var(--gradient-subtle);
 		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
+		border-radius: 0rem;
 		overflow: hidden;
 		box-shadow: var(--shadow-sm);
 		text-decoration: none;
@@ -32,6 +32,7 @@ const { data, slug } = Astro.props.blog;
 
 	.card:hover {
 		box-shadow: var(--shadow-md);
+		filter: grayscale(.5);
 	}
 
 	.title {
