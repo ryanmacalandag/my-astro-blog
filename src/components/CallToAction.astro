@@ -18,18 +18,25 @@ const { href } = Astro.props;
 		gap: 0.8em;
 		color: var(--accent-text-over);
 		text-decoration: none;
-		line-height: 1.1;
+		line-height: 1.2;
 		border-radius: 999rem;
 		overflow: hidden;
 		background: var(--gradient-accent-orange);
 		box-shadow: var(--shadow-md);
 		white-space: nowrap;
+		font-family: var(--font-brand);
+		text-transform: uppercase;
+		font-size: var(--text-sm);
+		width: fit-content;
+		margin: 1rem auto;
 	}
 
 	@media (min-width: 20em) {
 		a {
-			font-size: var(--text-lg);
+			font-size: var(--text-md);
+			margin: 1rem;
 		}
+		
 	}
 
 	/* Overlay for hover effects. */
@@ -50,7 +57,8 @@ const { href } = Astro.props;
 	@media (min-width: 50em) {
 		a {
 			padding: 1.125rem 2.5rem;
-			font-size: var(--text-xl);
+			font-size: var(--text-lg);
+			margin: 1rem 3rem;
 		}
 	}
 </style>

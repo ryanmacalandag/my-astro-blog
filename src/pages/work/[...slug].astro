@@ -32,7 +32,7 @@ const { Content } = await entry.render();
 		<div class="stack gap-15">
 			<header>
 				<div class="wrapper stack gap-2">
-					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Work</a>
+					<a class="back-link" href="/work/"><Icon icon="arrow-left" /> Works</a>
 					<Hero title={entry.data.title} align="start">
 						<div class="details">
 							<div class="tags">
@@ -63,13 +63,13 @@ const { Content } = await entry.render();
 	}
 
 	.back-link {
-		display: none;
+		/* display: none; */
 	}
 
 	.details {
 		display: flex;
 		flex-direction: column;
-		padding: 0.5rem;
+		padding: 0rem;
 		gap: 1.5rem;
 		justify-content: space-between;
 		align-items: center;
@@ -77,7 +77,10 @@ const { Content } = await entry.render();
 
 	.tags {
 		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
 		gap: 0.5rem;
+		width: 100%;
 	}
 
 	.description {
@@ -88,10 +91,12 @@ const { Content } = await entry.render();
 	.content {
 		max-width: 65ch;
 		margin-inline: auto;
+		margin-bottom: 1.65rem;
+		font-size: var(--text-md);
 	}
 
 	.content > :global(* + *) {
-		margin-top: 1rem;
+		margin-top: 1.85rem;
 	}
 
 	.content :global(h1),
@@ -103,10 +108,10 @@ const { Content } = await entry.render();
 	}
 
 	.content :global(img) {
-		border-radius: 1.5rem;
+		/* border-radius: 1.5rem;
 		box-shadow: var(--shadow-sm);
 		background: var(--gradient-subtle);
-		border: 1px solid var(--gray-800);
+		border: 1px solid var(--gray-800); */
 	}
 
 	.content :global(blockquote) {
@@ -142,6 +147,11 @@ const { Content } = await entry.render();
 		.details {
 			flex-direction: row;
 			gap: 2.5rem;
+		}
+
+		.content {
+			margin-bottom: 3rem;
+			font-size: var(--text-lg);
 		}
 
 		.content :global(blockquote) {

@@ -68,13 +68,14 @@ const { title, description } = Astro.props;
 				--bg-image-footer: url('/assets/backgrounds/bg-footer-dark-800w.jpg');
 			}
 
+
 			@media (min-width: 50em) {
 				:root {
 					--bg-scale: 1;
 					--bg-image-main: url('/assets/backgrounds/bg-main-light-1440w.jpg');
 				}
 				:root.theme-dark {
-					--bg-image-main: url('/assets/backgrounds/bg-main-dark-1440w.jpg');
+					--b-image-main: url('/assets/backgrounds/bg-main-dark-1440w.jpg');
 				}
 
 				:root.loaded {
@@ -87,6 +88,7 @@ const { title, description } = Astro.props;
 					--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-dark-1440w.jpg');
 					--bg-image-footer: url('/assets/backgrounds/bg-footer-dark-1440w.jpg');
 				}
+
 			}
 
 			.backgrounds {
