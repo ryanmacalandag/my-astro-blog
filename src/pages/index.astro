@@ -32,11 +32,11 @@ const blog = (await getCollection('blog'))
 ---
 
 <BaseLayout>
-	<div class="stack gap-20 lg:gap-48">
+	<div class="stack gap-30 lg:gap-48">
 		<div class="wrapper stack gap-8 lg:gap-20">
 			<header class="hero">
 				<Hero
-					title="Kumusta? My name is Ryan Macalandag"
+					title="Hello, I'm Ryan Macalandag"
 					tagline="I am a frontend developer, creative designer and multimedia producer based in Canberra."
 					align="start"
 				>
@@ -62,11 +62,11 @@ const blog = (await getCollection('blog'))
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
+					<!-- <p>Take a look below at some of my featured work for clients from the past few years.</p> -->
 				</header>
 
 				<div class="gallery">
-					<Grid>
+					<Grid variant='small'>
 						{
 							projects.map((project) => (
 								<li>
@@ -153,8 +153,8 @@ const blog = (await getCollection('blog'))
 	.hero img {
 		aspect-ratio: 5 / 4;
 		object-fit: cover;
-		object-position: top;
-		border-radius: 1.5rem;
+		object-position: center;
+		/* border-radius: 1.5rem; */
 		box-shadow: var(--shadow-md);
 	}
 
@@ -174,8 +174,16 @@ const blog = (await getCollection('blog'))
 
 		.hero img {
 			aspect-ratio: 3 / 4;
-			border-radius: 4.5rem;
+			/* border-radius: 4.5rem; */
 			object-fit: cover;
+			transform: rotate(2deg);
+			filter: saturate(0);
+			transition: 300ms ease-in-out;
+		}
+
+		.hero img:hover {
+			transform: rotate(6deg);
+			filter: saturate(1);
 		}
 	}
 

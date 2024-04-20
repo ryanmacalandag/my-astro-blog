@@ -12,8 +12,7 @@ const { data, slug } = Astro.props.blog;
 	<!-- <span class="title">{data.title}</span> -->
 	<img src={data.img} alt={data.img_alt || ''} loading="lazy" decoding="async" />
 	<div class="blog-card-info">
-		<div>{data.title}</div>
-		<div></div>
+		<p>{data.title}</p>
 	</div>
 </a>
 
@@ -22,7 +21,7 @@ const { data, slug } = Astro.props.blog;
 		display: grid;
 		grid-template: auto 1fr / auto 1fr;
 		gap: 1.35rem;
-		height: 11rem;
+		/* height: 11rem; */
 		background: var(--color-transparent);
 		/* border: 1px solid var(--gray-800); */
 		border-radius: 0rem;
@@ -41,7 +40,7 @@ const { data, slug } = Astro.props.blog;
 	}
 
 	.title {
-		grid-area: 1 / 1 / 2 / 2;
+		display: flex;
 		z-index: 1;
 		margin: 0.5rem;
 		padding: 0.5rem 1rem;
@@ -62,16 +61,17 @@ const { data, slug } = Astro.props.blog;
 		flex-direction: row;
 		justify-content: space-between;
 		gap: 1rem;
+		width: fit-content;
 	}
 
 	@media (min-width: 50em) {
 		.card {
-			height: 22rem;
+			/* height: 22rem; */
 			/* border-radius: 1.5rem; */
 		}
 
 		.title {
-			border-radius: 0.9375rem;
+			width: 50%;
 		}
 	}
 </style>
