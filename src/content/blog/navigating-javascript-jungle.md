@@ -1,7 +1,7 @@
 ---
 title: Navigating the JavaScript Jungle
 publishDate: 2024-04-16 10:00:00
-img: /assets/stock-2.jpg
+img: /assets/javascript-developer.png
 img_alt: A bright pink sheet of paper used to wrap flowers curves in front of rich blue background
 description: |
   Welcome to the jungle, fellow coders! Today, we're embarking on a wild adventure through the lush landscape of JavaScript frameworks. Grab your gear, because we're diving into the tangled vines of React, swinging through the branches of Next.js, and soaring high with Astro. 
