@@ -25,7 +25,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 	<div class="menu-header">
 		<a href="/" class="site-title">
 			<Icon icon="code" color="var(--accent-regular)" size="1.6em" gradient />
-			Ryan Macalandag
+			RyanMacalandag
 		</a>
 		<menu-button>
 			<template>
@@ -171,11 +171,15 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 
 	.site-title {
 		display: flex;
+		flex-direction: row;
+		align-items: center;
 		gap: 0.5rem;
 		align-items: center;
-		line-height: 1.1;
+		line-height: 1;
 		color: var(--gray-0);
 		text-decoration: none;
+		font-weight: 700;
+		text-transform: lowercase;
 	}
 
 	.menu-button {
@@ -291,7 +295,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		}
 
 		.site-title {
-			font-size: var(--text-lg);
+			font-size: var(--text-xl);
 		}
 
 		.menu-content {

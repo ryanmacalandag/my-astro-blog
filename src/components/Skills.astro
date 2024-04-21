@@ -5,25 +5,47 @@ import Icon from './Icon.astro';
 <section class="box skills">
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="terminal-window" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Full Stack</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+		<h2>Web Developer</h2>
+		<ul class="skills-list">
+			<li>Frontend developer</li>
+			<li>UI/UX</li>
+			<li>HTML/CSS</li>
+			<li>Javascript</li>
+			<li>React JS</li>
+			<li>Next</li>
+			<li>Astro</li>
+			<li>PHP/MySQL</li>
+			<li>Wordpress</li>
+			<li>Salesforce</li>
+			<li>Hubspot</li>
+		</ul>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
-		<Icon icon="trophy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Industry Leader</h2>
-		<p>Neque viverra justo nec ultrices dui. Est ultricies integer quis auctor elit.</p>
+		<Icon icon="brush" color="var(--accent-regular)" size="2.5rem" gradient />
+		<h2>Creative Designer</h2>
+		<ul class="skills-list">
+			<li>Branding</li>
+			<li>Graphic Design</li>
+			<li>Print Design</li>
+		</ul>
 	</div>
 	<div class="stack gap-2 lg:gap-4">
 		<Icon icon="strategy" color="var(--accent-regular)" size="2.5rem" gradient />
-		<h2>Strategy-Minded</h2>
-		<p>Urna porttitor rhoncus dolor purus non enim praesent ornare.</p>
+		<h2>Multimedia Producer</h2>
+		<ul class="skills-list">
+			<li>Studio Photography</li>
+			<li>Corprate Photography</li>
+			<li>Product Photography</li>
+			<li>Video Production</li>
+			<li>Audio Recording</li>
+			<li>Colour Grading</li>
+		</ul>
 	</div>
 </section>
 
 <style>
 	.box {
 		border: 1px solid var(--gray-800);
-		border-radius: 0.75rem;
 		padding: 1.5rem;
 		background-color: var(--gray-999_40);
 		box-shadow: var(--shadow-sm);
@@ -43,9 +65,15 @@ import Icon from './Icon.astro';
 		color: var(--gray-400);
 	}
 
+	.skills-list {
+		display: flex;
+		flex-direction: column;
+		list-style: square;
+		gap: 1rem;
+	}
+
 	@media (min-width: 50em) {
 		.box {
-			border-radius: 1.5rem;
 			padding: 2.5rem;
 		}
 

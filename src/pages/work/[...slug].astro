@@ -85,7 +85,6 @@ const { Content } = await entry.render();
 
 	.description {
 		font-size: var(--text-lg);
-		max-width: 54ch;
 	}
 
 	.content {
@@ -147,6 +146,15 @@ const { Content } = await entry.render();
 		.details {
 			flex-direction: row;
 			gap: 2.5rem;
+		}
+
+		.details .tags {
+			width: 30%;
+			flex-shrink: 0;
+		}
+
+		.details .description {
+			flex-grow: 1;
 		}
 
 		.content {
