@@ -37,13 +37,13 @@ const blogCollection = (await getCollection('blog'))
 			<header class="hero">
 				<Hero
 					title="Hello, I'm Ryan Macalandag"
-					tagline="I am a frontend developer, creative designer and multimedia producer based in Canberra."
+					tagline="I am a frontend developer, multimedia creative and communications professional based in Canberra."
 					align="start"
 				>
 					<div class="roles">
 						<Pill><Icon icon="code" size="1.33em" /> Developer</Pill>
-						<Pill><Icon icon="brush" size="1.33em" /> Designer</Pill>
-						<Pill><Icon icon="strategy" size="1.33em" /> Multimedia</Pill>
+						<Pill><Icon icon="brush" size="1.33em" /> Multimedia</Pill>
+						<Pill><Icon icon="strategy" size="1.33em" /> Communications</Pill>
 					</div>
 				</Hero>
 
@@ -321,8 +321,8 @@ const blogCollection = (await getCollection('blog'))
 	}
 
 	.section-header {
-		justify-self: center;
-		text-align: center;
+		justify-self: left;
+		text-align: left;
 		max-width: 50ch;
 		font-size: var(--text-md);
 		color: var(--gray-300);
@@ -330,6 +330,7 @@ const blogCollection = (await getCollection('blog'))
 
 	.section-header h3 {
 		font-size: var(--text-2xl);
+		font-weight: 700;
 	}
 
 	@media (min-width: 50em) {
@@ -344,12 +345,15 @@ const blogCollection = (await getCollection('blog'))
 		}
 
 		.section-header {
+			justify-self: center;
+			text-align: center;
 			grid-area: header;
 			font-size: var(--text-lg);
 		}
 
 		.section-header h3 {
-			font-size: var(--text-4xl);
+			font-size: var(--text-3xl);
+			font-weight: 700;
 		}
 
 		.with-cta .section-header {
