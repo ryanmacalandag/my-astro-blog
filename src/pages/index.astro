@@ -14,8 +14,9 @@ import Pill from '../components/Pill.astro';
 // Page section components
 import ContactCTA from '../components/ContactCTA.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
-import BlogPreview from '../components/BlogPreview.astro';
 import Skills from '../components/Skills.astro';
+import GridSimple from '../components/GridSimple.astro';
+import BlogSimplePreview from '../components/BlogSimplePreview.astro';
 
 // Content Fetching: List four most recent work projects
 const projects = (await getCollection('work'))
@@ -77,7 +78,7 @@ const blogCollection = (await getCollection('blog'))
 
 			</header>
 
-			<Skills />
+			<!-- <Skills /> -->
 		</div>
 
 		<main class="wrapper stack gap-20 lg:gap-48">
@@ -86,7 +87,6 @@ const blogCollection = (await getCollection('blog'))
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
 					<h3>Selected Work</h3>
-					<p>Take a look below at some of my featured work for clients from the past few years.</p>
 				</header>
 
 				<div class="gallery">
@@ -116,15 +116,15 @@ const blogCollection = (await getCollection('blog'))
 				</header>
 
 				<div class="gallery">
-					<Grid>
+					<GridSimple>
 						{
 							blogCollection.map((blog) => (
 								<li>
-									<BlogPreview blog={blog} />
+									<BlogSimplePreview blog={blog} />
 								</li>
 							))
 						}
-					</Grid>
+					</GridSimple>
 				</div>
 
 				<div class="cta">
@@ -325,6 +325,9 @@ const blogCollection = (await getCollection('blog'))
 	.section-header {
 		justify-self: left;
 		text-align: left;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 		max-width: 50ch;
 		font-size: var(--text-md);
 		color: var(--gray-300);
