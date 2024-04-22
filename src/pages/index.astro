@@ -251,7 +251,7 @@ const blogCollection = (await getCollection('blog'))
 		.portrait .overlay-03 {
 			position: absolute;
 			top: 83%;
-			left: 5%;
+			left: -15%;
 			padding: .65rem 1rem;
 			/* color: var(--gray-999); */
 			background-color: var(--gray-999);
@@ -266,12 +266,13 @@ const blogCollection = (await getCollection('blog'))
 		.portrait:hover .overlay-03 {
 			transform: rotate(-3deg);
 			opacity: 1;
+			left: 5%;
 		}
 
 		.portrait .overlay-04 {
 			position: absolute;
 			top: -5%;
-			left: 10%;
+			left: 0%;
 			opacity: 0;
 			transform: rotate(30deg); transform-origin: 0% 50%;
 			transition: 300ms ease-in-out;
@@ -281,6 +282,7 @@ const blogCollection = (await getCollection('blog'))
 		.portrait:hover .overlay-04 {
 			transform: rotate(-3deg);
 			opacity: 1;
+			left: 10%;
 		}
 
 	}

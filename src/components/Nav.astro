@@ -24,8 +24,8 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 <nav>
 	<div class="menu-header">
 		<a href="/" class="site-title">
-			<Icon icon="code" color="var(--accent-regular)" size="1.6em" gradient />
-			RyanMacalandag.com
+			<Icon icon="fire" color="var(--accent-regular)" size="1.6em" />
+			ryanmacalandag
 		</a>
 		<menu-button>
 			<template>
@@ -173,13 +173,14 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 		display: flex;
 		flex-direction: row;
 		align-items: center;
-		gap: 0.5rem;
+		gap: 0.25rem;
 		align-items: center;
 		line-height: 1;
 		color: var(--gray-0);
 		text-decoration: none;
 		font-weight: 700;
 		text-transform: lowercase;
+		font-size: var(--text-lg);
 	}
 
 	.menu-button {
