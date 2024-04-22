@@ -47,12 +47,34 @@ const blogCollection = (await getCollection('blog'))
 					</div>
 				</Hero>
 
-				<img
-					alt="Ryan Macalandag takes a selfie in Autumn"
-					width="480"
-					height="620"
-					src="/assets/portrait.jpg"
-				/>
+				<div class="portrait">
+					<img
+						alt="Ryan Macalandag takes a selfie in Autumn"
+						width="480"
+						height="620"
+						src="/assets/portrait.jpg"
+					/>
+
+					<!-- overlay elements -->
+					<div class="portrait-overlay">
+						<div class="overlay-01">
+							G'day!
+						</div>
+						<div class="overlay-02">
+							Kumusta po?
+						</div>
+						<div class="overlay-03">
+							Hope you're doing well. 😃
+						</div>
+						<div class="overlay-04">
+							<div class="animate-rotate">
+								<Icon icon="circle-dashed" color="var(--accent-regular)" size="5em" />
+							</div>
+						</div>
+					</div>
+
+				</div>
+
 			</header>
 
 			<Skills />
@@ -137,6 +159,10 @@ const blogCollection = (await getCollection('blog'))
 		box-shadow: var(--shadow-lg);
 	}
 
+	.portrait .portrait-overlay {
+		display: none;
+	}
+
 	@media (min-width: 50em) {
 		.hero {
 			display: grid;
@@ -150,19 +176,113 @@ const blogCollection = (await getCollection('blog'))
 			display: flex;
 			gap: 0.5rem;
 		}
-
-		.hero img {
+		
+		.portrait {
+			position: relative;
+			transform: rotate(0deg);
+			transition: 300ms;
+		}
+		
+		.portrait:hover {
+			transform: rotate(3deg);
+		}
+		
+		.portrait .portrait-overlay {
+			display: flex;
+			/* opacity: 0; */
+			transition: 300ms;
+		}
+		
+		.portrait:hover .portrait-overlay {
+			/* opacity: 1; */
+		}
+		
+		.portrait img {
 			aspect-ratio: 3 / 4;
 			object-fit: cover;
-			transform: rotate(2deg);
 			filter: saturate(1);
 			transition: 300ms ease-in-out;
 		}
 
-		.hero img:hover {
-			transform: rotate(6deg);
+		.portrait:hover img {
 			filter: saturate(.65);
 		}
+
+		.portrait .overlay-01 {
+			position: absolute;
+			top: 25%;
+			right: 10%;
+			padding: .65rem 1rem;
+			background-color: var(--gray-999);
+			border-radius: .35rem;
+			opacity: 0;
+			transform: rotate(30deg); transform-origin: 0% 50%;
+			transition: 300ms ease-in-out;
+			transition-delay: 0ms;
+			box-shadow: var(--shadow-sm);
+		}
+
+		.portrait:hover .overlay-01 {
+			transform: rotate(-3deg);
+			opacity: 1;
+		}
+
+		.portrait .overlay-02 {
+			position: absolute;
+			font-style: italic;
+			top: 75%;
+			left: -5%;
+			padding: .65rem 1rem;
+			color: var(--gray-999);
+			background-color: var(--accent-regular);
+			border-radius: .35rem;
+			opacity: 0;
+			transform: rotate(30deg); transform-origin: 0% 50%;
+			transition: 300ms ease-in-out;
+			transition-delay: 100ms;
+			box-shadow: var(--shadow-sm);
+		}
+
+		.portrait:hover .overlay-02 {
+			transform: rotate(-3deg);
+			opacity: 1;
+		}
+
+		.portrait .overlay-03 {
+			position: absolute;
+			top: 83%;
+			left: 5%;
+			padding: .65rem 1rem;
+			/* color: var(--gray-999); */
+			background-color: var(--gray-999);
+			border-radius: .35rem;
+			opacity: 0;
+			transform: rotate(30deg); transform-origin: 0% 50%;
+			transition: 300ms ease-in-out;
+			transition-delay: 200ms;
+			box-shadow: var(--shadow-sm);
+		}
+
+		.portrait:hover .overlay-03 {
+			transform: rotate(-3deg);
+			opacity: 1;
+		}
+
+		.portrait .overlay-04 {
+			position: absolute;
+			top: -5%;
+			left: 10%;
+			opacity: 0;
+			transform: rotate(30deg); transform-origin: 0% 50%;
+			transition: 300ms ease-in-out;
+			transition-delay: 0ms;
+		}
+
+		.portrait:hover .overlay-04 {
+			transform: rotate(-3deg);
+			opacity: 1;
+		}
+
 	}
 
 	/* ====================================================== */
